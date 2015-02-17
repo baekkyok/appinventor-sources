@@ -1164,7 +1164,7 @@ Blockly.Versioning.AllUpgradeMaps =
 
     // AI2: No blocks need to be modified to upgrade to version 10
     // The default value of TextAlignment was changed from Normal (left) to Center
-    10: "noUpgrade",
+    10: "noUpgrade"
 
   }, // End Canvas upgraders
 
@@ -1495,7 +1495,10 @@ Blockly.Versioning.AllUpgradeMaps =
     // AI2:
     // - Added BackgroundColor Property
     // - Added TextColor Property
-    3: "noUpgrade"
+    3: "noUpgrade",
+    // AI2:
+    // - Added TextSize Property
+    4: "noUpgrade"
 
   }, // End ListView upgraders
 
@@ -1503,13 +1506,6 @@ Blockly.Versioning.AllUpgradeMaps =
 
     // AI1: The TimeInterval and DistanceInterval properties were added.
     // No changes required.
-    2: "noUpgrade"
-
-  }, // End LocationSensor upgraders
-
-  "LocationSensor": {
-
-    // AI2: The TimeInterval and DistanceInterval properties were added.
     2: "noUpgrade"
 
   }, // End LocationSensor upgraders
@@ -1656,7 +1652,7 @@ Blockly.Versioning.AllUpgradeMaps =
 
     // AI1: The Shape property was added.
     // No blocks need to be modified to upgrade to version 4.
-    4: "noUpgrade",
+    4: "noUpgrade"
 
   }, // End PhoneNumberPicker upgraders
 
@@ -1808,7 +1804,10 @@ Blockly.Versioning.AllUpgradeMaps =
   "SoundRecorder": {
 
     //This is initial version. Placeholder for future upgrades
-    1: "noUpgrade"
+    1: "noUpgrade",
+    // AI2: The Sound.SavedRecording property was added.
+    // No blocks need to be modified to upgrade to version 2.
+    2: "noUpgrade"
 
   }, // End SoundRecorder upgraders
 
@@ -1851,7 +1850,10 @@ Blockly.Versioning.AllUpgradeMaps =
     // No blocks need to be modified to upgrade to version 4, although old
     // block need to have MultiLine explicitly set to true, since the new default
     // is false (see YoungAndroidFormUpgrade).
-    4: "noUpgrade"
+    4: "noUpgrade",
+
+    // AI2: Added RequestFocus method
+    5: "noUpgrade"
 
   }, // End TextBox upgraders
 
@@ -2041,7 +2043,10 @@ Blockly.Versioning.AllUpgradeMaps =
     4: "noUpgrade",
 
     // AI2: IgnoreSslError property added
-    5: "noUpgrade"
+    5: "noUpgrade",
+
+    // AI2: Added ClearCaches method
+    6: "noUpgrade"
 
   }, // End WebViewer upgraders
 
