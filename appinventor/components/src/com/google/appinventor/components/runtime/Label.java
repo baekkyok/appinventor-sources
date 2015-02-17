@@ -11,6 +11,7 @@ import com.google.appinventor.components.annotations.DesignerProperty;
 import com.google.appinventor.components.annotations.PropertyCategory;
 import com.google.appinventor.components.annotations.SimpleObject;
 import com.google.appinventor.components.annotations.SimpleProperty;
+import com.google.appinventor.components.annotations.SimpleFunction;
 import com.google.appinventor.components.common.ComponentCategory;
 import com.google.appinventor.components.common.PropertyTypeConstants;
 import com.google.appinventor.components.common.YaVersion;
@@ -134,6 +135,21 @@ public final class Label extends AndroidViewComponent {
   public int TextAlignment() {
     return textAlignment;
   }
+
+  /**
+   * Specifies the text displayed by the label.
+   *
+   * @param text  append  caption for label
+   */
+  @SimpleFunction
+          //discription = "Appends new text to the label.")
+  public void TextAppend(String text) {
+      view.append(text);
+  }
+
+
+
+
 
   /**
    * Specifies the alignment of the label's text: center, normal

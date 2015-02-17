@@ -260,6 +260,7 @@ public class TranslationComponentMethods {
     map.put("InsertRow", MESSAGES.InsertRowMethods());
     map.put("GetRows", MESSAGES.GetRowsMethods());
     map.put("GetRowsWithConditions", MESSAGES.GetRowsWithConditionsMethods());
+    map.put("TextAppend", MESSAGES.TextAppendMethods());
 
     return map;
   }
