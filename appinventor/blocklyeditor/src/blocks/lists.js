@@ -412,7 +412,7 @@ Blockly.Blocks['lists_from_csv_table'] = {
   typeblock: [{ translatedName: Blockly.Msg.LANG_LISTS_FROM_CSV_TABLE_TITLE_FROM_CSV }]
 };
 
-Blockly.Blocks['lists_lookup_in_pairs'] = {
+Blockly.Blocks['lists_lookup_pairs'] = {
   // Look up in a list of pairs (key, value).
   category : 'Lists',
   helpUrl : Blockly.Msg.LANG_LISTS_LOOKUP_IN_PAIRS_HELPURL,

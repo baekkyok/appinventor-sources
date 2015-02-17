@@ -55,6 +55,9 @@ public class Camera extends AndroidNonvisibleComponent
   /* Used to identify the call to startActivityForResult. Will be passed back
   into the resultReturned() callback method. */
   private int requestCode;
+  private boolean lightOn;
+  private android.hardware.Camera cam;
+
 
   // whether to open into the front-facing camera
   private boolean useFront;
@@ -69,10 +72,32 @@ public class Camera extends AndroidNonvisibleComponent
   public Camera(ComponentContainer container) {
     super(container.$form());
     this.container = container;
-
+    this.lightOn = false;
     // Default property values
     UseFront(false);
   }
+
+    /**
+     * Turn the camera's light off or on
+     */
+    @SimpleFunction
+    public void ToggleLight() {
+        if (this.lightOn){
+            if (cam != null){
+                cam.release();
+            }
+            this.lightOn = false;
+        }
+        else {
+            cam = android.hardware.Camera.open();
+            android.hardware.Camera.Parameters p = cam.getParameters();
+            p.setFlashMode(android.hardware.Camera.Parameters.FLASH_MODE_TORCH);
+            cam.setParameters(p);
+            cam.startPreview();
+            this.lightOn = true;
+        }
+
+    }
 
   /**
    * Returns true if the front-facing camera is to be used (when available)
